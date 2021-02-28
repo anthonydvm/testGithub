@@ -1,0 +1,75 @@
+// Conocer la versión de git instalada
+    git version
+
+// Ayuda sobre los comandos
+git help
+
+// Iniciar un nuevo repositorio
+// Crear la carpeta oculta .git
+    git init
+
+// Ver que archivos no han sido registrados
+    git status
+
+// Agregar todos los archivos para que esté pendiente de los cambios
+    git add .
+
+// Crear commit (fotografía del proyecto en ese momento)
+    git commit -m "primer commit"
+
+// Muestra la lista de commit del mas reciente al más antigüo
+    git log
+
+// Muestra en una línea los commit realizados
+    git log --oneline
+
+**************Viajes a través de los commit**************
+// Viajamos al commit en específico f52f3da
+    git reset --mixed f52f3da
+
+// Viajamos al commit en específico f52f3da y eliminamos los cambios futuros
+    git reset --hard f52f3da
+
+// Muestra todos los cambios incluso si borramos los commit
+    git reflog
+
+// Viajamos al commit en específico f52f3da y podemos restaurar los archivos
+    git reset --hard f52f3da
+
+//Si deseamos destruir todos los cambios sin haber realizado un commit podemos utilizar
+    git reset --hard
+
+// Eliminar Archivos
+    git rm nombreArchivo.vue
+
+**************Ramas o Branch**************
+// Crea una nueva rama
+    git branch nombreRama
+
+// Nos muestra en que rama estamos
+    git branch
+
+// Nos movemos a la nueva rama
+    git checkout nombreRama
+
+// Nos movemos a la nueva rama
+    git merge nombreRama
+
+// Eliminar una rama
+    git branch -d nombreRama
+
+**************Tags**************
+// Crear un tags
+    git tag versionAlpha -m "versión alpha"
+
+// Listar tags
+    git tag
+
+// Borrar tags
+    git tag -d nombreTags
+
+// Hacer una versión en un commit anterior ej: f52f3da
+    git tag -a nombreTag f52f3da -m "version alpha"
+
+// Mostrar información del tag
+    git show nombreTag
